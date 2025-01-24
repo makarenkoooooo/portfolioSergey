@@ -1,0 +1,610 @@
+.App {
+}
+/* 
+font-family: "Roboto", serif; */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  font-size: 26px;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+.header-container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 320px) {
+  .header-container {
+    padding: 15px;
+    padding-top: 30px;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* coursor */
+/* Скрываем стандартный курсор на всей странице */
+/* Скрываем стандартный курсор на всей странице */
+
+/* Стиль для кастомного курсора (черная точка) */
+.cursor {
+  position: fixed;
+  width: 10px; /* Размер точки */
+  height: 10px;
+  background-color: black; /* Черный цвет */
+  border-radius: 50%; /* Круглая форма */
+  pointer-events: none; /* Убираем взаимодействие с курсором */
+  opacity: 1;
+  z-index: 9999; /* Над другими элементами */
+  transition: opacity 0.3s ease;
+}
+
+/* Центрирование и стили для блока .main */
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Стиль для имени и фамилии */
+.main-title {
+  font-size: 6rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  opacity: 0;
+}
+
+@media (max-width: 320px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Стиль для мини-тайтла */
+.main-subtitle {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  opacity: 0;
+  margin-top: 20px;
+}
+
+@media (max-width: 320px) {
+  .main-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Стиль для кнопки "About Me" */
+.about-me-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  opacity: 0;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.about-me-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.about-me-btn:focus {
+  outline: none;
+}
+
+/* Стиль для блока .about-me */
+.about-me {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Стиль для заголовка в блоке "About Me" */
+.about-me-title {
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0;
+  max-width: 800px;
+}
+
+/* Стили для кнопки "Technical Skills" */
+.about-me-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  opacity: 0;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+@media (max-width: 320px) {
+  .about-me-btn {
+    font-size: 1rem;
+  }
+}
+
+.about-me-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.about-me-btn:focus {
+  outline: none;
+}
+
+/* Стили для компонента TechnicalSkills */
+.technical-skills {
+  padding: 50px 20px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.skills-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 800px;
+}
+
+.skills-list li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.skills-list li strong {
+  color: black;
+}
+
+.projects-button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.projects-button:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Общие стили для контейнера с проектами */
+
+.projects-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.projects-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-info {
+  padding-top: 10px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.project-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px; /* Уменьшен отступ */
+  border-radius: 10px;
+  width: 50%; /* Уменьшена ширина */
+  max-width: 600px; /* Уменьшено максимальное значение */
+  position: relative;
+  text-align: center;
+}
+
+.modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem; /* Уменьшен размер */
+  color: #333;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #000;
+}
+
+/* Новый стиль для подробного описания с выравниванием */
+.modal-description {
+  font-size: 1.1rem; /* Немного уменьшен размер текста */
+  color: #444;
+  text-align: justify;
+  line-height: 1.5; /* Уменьшен межстрочный интервал */
+  margin-top: 20px;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Увеличиваем ширину на мобильных */
+    padding: 15px; /* Уменьшаем отступы */
+  }
+
+  .modal-description {
+    font-size: 1rem; /* Уменьшен размер текста */
+    line-height: 1.4; /* Уменьшен межстрочный интервал */
+  }
+
+  .close-modal {
+    font-size: 1.5rem; /* Уменьшен размер кнопки закрытия */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%; /* Почти полностью заполняет ширину экрана */
+    padding: 10px; /* Ещё меньше отступы для компактности */
+  }
+
+  .modal-description {
+    font-size: 0.9rem; /* Ещё меньше текст */
+    line-height: 1.3; /* Уменьшенный интервал */
+  }
+
+  .close-modal {
+    font-size: 1.3rem; /* Компактная кнопка */
+  }
+}
+
+.work-experience-container {
+  padding: 40px 20px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-experience-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.scroll-to-work-button {
+  margin-top: 35px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.scroll-to-work-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Общие стили остаются без изменений */
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 20px;
+    padding-bottom: 100px;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .projects-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Одноколоночная сетка на мобильных устройствах */
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 15px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-text {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-description {
+    font-size: 1rem;
+  }
+
+  .close-modal {
+    font-size: 1.5rem;
+  }
+
+  .work-experience-container {
+    padding: 20px 10px;
+    text-align: center;
+    height: auto; /* Автоматическая высота для мобильных */
+  }
+
+  .work-experience-title {
+    font-size: 2rem;
+  }
+
+  .scroll-to-work-button {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 1.8rem;
+  }
+
+  .projects-description {
+    font-size: 0.9rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-text {
+    font-size: 0.8rem;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-description {
+    font-size: 0.9rem;
+  }
+
+  .scroll-to-work-button {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
+
+/* WORK EXP */
+/* Общие стили */
+.accordion {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 80%; /* Увеличиваем ширину */
+  margin: 0 auto;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 320px) {
+  .accordion-title {
+    font-size: 0.9rem;
+    flex-direction: column;
+  }
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  background-color: #fafafa;
+  transition: opacity 0.3s ease;
+}
+
+.accordion-open .accordion-content {
+  padding: 20px;
+}
+
+.accordion-open .accordion-header {
+  background-color: #f0f0f0; /* Цвет фона при открытии */
+}
+
+.work-experience-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contacts-btn {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.contacts-btn:hover {
+  background-color: #000;
+  color: white;
+}
