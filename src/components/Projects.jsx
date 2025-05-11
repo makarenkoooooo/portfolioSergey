@@ -4,6 +4,7 @@ import img1 from '../images/imgProject1.png'
 import img2 from '../images/imgProject2.png'
 import img3 from '../images/imgProject3.png'
 import img4 from '../images/imgProject4.png'
+import img5 from '../images/imgProject5.png'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -47,6 +48,16 @@ const Projects = () => {
       detailedDescription:
         'Developed a responsive landing page for WayStar using pure HTML and CSS. Implemented a contact form with form submission via PHP to email. Deployed the project to a public hosting environment and ensured cross-browser compatibility.',
       timeFrame: 'Frontend Developer, April 2025',
+      location: 'Remote',
+    },
+    {
+      title: 'Shark Fin Coffee Roasters',
+      description:
+        'Landing page for a specialty coffee roastery with ordering functionality.',
+      image: img5,
+      detailedDescription:
+        'Created a responsive landing page for Shark Fin Coffee Roasters using HTML, CSS, and JavaScript. Developed an order form for takeaway coffee with input validation and submission. Implemented smooth section transitions and mobile-friendly layout.',
+      timeFrame: 'Frontend Developer, April 2024',
       location: 'Remote',
     },
   ]
