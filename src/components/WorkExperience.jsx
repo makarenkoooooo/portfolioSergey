@@ -1,53 +1,53 @@
-import React, { useState } from 'react';
-import gsap from 'gsap';
+import React, { useState } from 'react'
+import gsap from 'gsap'
 
 const WorkExperience = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null)
 
   const experienceData = [
     {
-      title: 'EasyHire',
-      date: 'May 2024 – November 2024',
+      title: 'EasyHire Platform',
+      date: 'September 2023 – December 2023',
       description:
-        'Developed web application interfaces for EasyHire using React and TypeScript. Integrated REST API for real-time data display. Applied BEM, DRY, and KISS principles to write maintainable code. Collaborated with backend developers to improve frontend-server integration.',
+        'Developed user interfaces for the EasyHire hiring automation platform using React and TypeScript. Integrated REST API for real-time data retrieval. Applied BEM, DRY, and KISS principles to write clean and maintainable code. Collaborated closely with backend developers to improve integration and user experience.',
     },
     {
-      title: 'Dashboard for Data Visualization',
+      title: 'Dashboard for Data Visualization (EdStat)',
       date: 'January 2024 – April 2024',
       description:
-        'Created an interactive dashboard using React and Material UI. Integrated API for real-time data display. Developed charts and tables with filtering and sorting for user convenience.',
+        'Created an interactive data dashboard using React and Material UI. Integrated external APIs for real-time data display. Built complex charts and tables with dynamic filtering and sorting to enhance usability and business insights.',
     },
     {
-      title: 'AI Video Generation Platform',
+      title: 'AI Video Generation Platform (CopyReels)',
       date: 'July 2023 – September 2023',
       description:
-        'Developed a responsive interface using React and Tailwind CSS. Configured interaction with AI API for processing user requests. Used Material UI to improve structure and interface usability.',
+        'Built a responsive frontend using React and Tailwind CSS for an AI-based video generation tool. Configured interaction with AI APIs to process and automate video content. Utilized Material UI to improve layout and UX.',
     },
     {
-      title: 'Industrial Equipment Website',
-      date: 'April 2023 – June 2023',
+      title: 'WayStar Landing Page',
+      date: 'April 2024',
       description:
-        'Created a professional website with intuitive navigation and order functionality. Developed order forms and conducted SEO optimization to enhance site visibility.',
+        'Developed a responsive landing page using HTML and CSS. Implemented contact form submission via PHP and deployed the project to a live hosting server. Focused on clean layout, cross-browser support, and ease of use.',
     },
     {
-      title: 'Online Store',
-      date: 'January 2023 – March 2023',
+      title: 'Industrial Equipment Website (GameChanger)',
+      date: 'January 2023 – May 2023',
       description:
-        'Enhanced the store’s interface and functionality, improving user experience. Configured interactive elements using JavaScript and jQuery. Implemented a responsive design for proper display across all devices.',
+        'Designed and developed a website for an industrial equipment supplier, focusing on UX and functional ordering. Built advanced filters, quote calculators, and submission forms. Conducted SEO optimization to increase search visibility.',
     },
-  ];
+  ]
 
   const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-    const content = document.querySelectorAll('.accordion-content')[index];
+    setActiveIndex(activeIndex === index ? null : index)
+    const content = document.querySelectorAll('.accordion-content')[index]
 
     // Плавное открытие и закрытие с помощью GSAP
     if (activeIndex === index) {
-      gsap.to(content, { height: 0, opacity: 0, duration: 0.5 });
+      gsap.to(content, { height: 0, opacity: 0, duration: 0.5 })
     } else {
-      gsap.to(content, { height: 'auto', opacity: 1, duration: 0.5 });
+      gsap.to(content, { height: 'auto', opacity: 1, duration: 0.5 })
     }
-  };
+  }
 
   const scrollToContacts = () => {
     // Плавная прокрутка до блока "Contacts" с помощью GSAP
@@ -55,8 +55,8 @@ const WorkExperience = () => {
       duration: 1, // Длительность прокрутки
       scrollTo: { y: '#contact', offsetY: 50 }, // Прокрутка до элемента с небольшим отступом сверху
       ease: 'power2.inOut', // Тип easing для плавности
-    });
-  };
+    })
+  }
 
   return (
     <div className="work-experience-container" id="experience">
@@ -91,7 +91,7 @@ const WorkExperience = () => {
         Contacts
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default WorkExperience;
+export default WorkExperience

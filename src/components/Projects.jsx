@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import img1 from '../images/imgProject1.png';
-import img2 from '../images/imgProject2.png';
-import img3 from '../images/imgProject3.png';
+import img1 from '../images/imgProject1.png'
+import img2 from '../images/imgProject2.png'
+import img3 from '../images/imgProject3.png'
+import img4 from '../images/imgProject4.png'
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null)
 
   const projects = [
     {
@@ -38,21 +39,31 @@ const Projects = () => {
       timeFrame: 'Frontend Developer, January 2024 – April 2024',
       location: 'Remote',
     },
-  ];
+    {
+      title: 'WayStar Landing Page',
+      description:
+        'Responsive landing page for a fictional company with form submission and deployment.',
+      image: img4, // замените на подходящее изображение
+      detailedDescription:
+        'Developed a responsive landing page for WayStar using pure HTML and CSS. Implemented a contact form with form submission via PHP to email. Deployed the project to a public hosting environment and ensured cross-browser compatibility.',
+      timeFrame: 'Frontend Developer, April 2025',
+      location: 'Remote',
+    },
+  ]
 
   const openModal = (project) => {
-    setSelectedProject(project);
-  };
+    setSelectedProject(project)
+  }
 
   const closeModal = () => {
-    setSelectedProject(null);
-  };
+    setSelectedProject(null)
+  }
 
   // Функция прокрутки к WorkExperience
   const scrollToWorkExperience = () => {
-    const workExperienceSection = document.getElementById('experience');
-    workExperienceSection.scrollIntoView({ behavior: 'smooth' });
-  };
+    const workExperienceSection = document.getElementById('experience')
+    workExperienceSection.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div className="projects-container" id="projects">
@@ -110,7 +121,7 @@ const Projects = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
